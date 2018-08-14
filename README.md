@@ -1,3 +1,2 @@
 # PhoneBook
-JS
-[PhoneBook](https://iquach92/js/index.html)
+[PhoneBook](https://iquach92.github.io)

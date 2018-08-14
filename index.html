@@ -6,27 +6,48 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;subset=cyrillic" rel="stylesheet">
+
 </head>
 <body>
 <div class="iphone">
-    <div class="container">
+
         <div class="header"></div>
         <div class="main">
-            <h1>Контакты</h1>
-            <div class="plus">
-
+            <div class="container">
+                    <h1>Контакты</h1>
+                <div class="plus">
+                    <i class="fas fa-plus"></i>
+                </div>
             </div>
             <div class="find">
                 <i class="fas fa-search"></i>
                 <input type="text" id="filter" placeholder="Поиск" value="">
-                <i class="fas fa-times"></i>
+                <div id="clear" class="clear">
+                    <i class="fas fa-times"></i></div>
+            </div>
+            <div class="myinfo">
+                <div class="avatar"><img src="img/IMG_2773.JPG" alt="аватарка"></div>
+                <div class="myinfo__content">
+                    <div class="myinfo__name"><p>Andrey Khan</p></div>
+                    <div class="myinfo__number"><p>Мой номер : +380 (99) 958 24 84</p></div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="blockAdd" id="blockAdd" style="display: block">
+                    <input type="text" name="firstName" placeholder="Имя">
+                    <input type="text" name="lastName" placeholder="Фамилия">
+                    <input type="text" name="phone" placeholder="Телефон">
+                    <input type="text" name="email" placeholder="E-mail">
+                </div>
+                <div class="contacts">
+                </div>
             </div>
         </div>
         <div class="footer">
             <p>copyright 2018</p>
         </div>
     </div>
-</div>
 <!--<header></header>-->
 <!--<main></main>-->
 <!--<footer></footer>-->

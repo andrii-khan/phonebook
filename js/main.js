@@ -25,7 +25,7 @@ var addBookDiv = document.querySelector(".addbook");
 var addressBook = [];
 
 openBtn.addEventListener('click', function () {
-    blockToAddForm.style.display = "block";
+    blockToAddForm.style.display = "flex";
 });
 
 cancelBtn.addEventListener('click', function () {
@@ -41,7 +41,7 @@ addBtn.addEventListener('click', addToBook);
 addBookDiv.addEventListener('click', removeEntry);
 
 function jsonStructure(fistName,lastName,phone,email) {
-    this.fistName = fistName;
+    this.firstName = fistName;
     this.lastName = lastName;
     this.phone = phone;
     this.email = email;
@@ -88,7 +88,7 @@ function addToBook() {
             addBookDiv.innerHTML = '';
             for (var n in addressBook) {
                 var str = '<div class="entry">'
-                str += '<div class="name"><p>' + addressBook[n].firstName + ' ' + addressBook[n].lastName + '</p></div>';
+                str += '<div class="name"><p>' + addressBook[n].lastName + ' ' + addressBook[n].firstName + '</p></div>';
                 str += '<div class="phone"><p>' + addressBook[n].phone + '</p></div>';
                 str += '<div class="email"><p>' + addressBook[n].email + '</p></div>';
                 str += '<div class="del"><a href="#" class="delbutton" data-id="' + n + '">Delete</a></div>';

@@ -2,13 +2,17 @@ body {
     background-color: darkgray;
 
 }
+a, li {
+    text-decoration: none;
+    list-style: none;
+}
 h1, p, input {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
 }
 .iphone {
-    margin: 20px auto;
-    max-width: 400px;
+    margin: 20px;
+    /*max-width: 400px;*/
     height: 700px;
     background: #ffffff;
     border: 10px solid black;
@@ -84,18 +88,29 @@ h1, p, input {
     border: 0;
     border-bottom: 1px solid grey;
 }
+.entry {
+    border-bottom: 2px solid grey;
 
+}
 .footer {
     display: flex;
     justify-content: center;
 }
-.blockAdd {
-    position: relative;
-    top: 5px;
-    left: 100px;
-    z-index: 2222;
+#firstName p {
+    font-weight: bold;
+    font-style: italic;
 }
-.blockAdd .btn {
-    position: relative;
-    left: 50px;
+/*.blockAdd {*/
+    /*position: relative;*/
+    /*top: 5px;*/
+    /*left: 100px;*/
+    /*z-index: 2222;*/
+/*}*/
+/*.blockAdd .btn {*/
+    /*position: relative;*/
+    /*left: 50px;*/
+/*}*/
+.blockAdd {
+    flex-direction: column;
+    align-items: center;
 }

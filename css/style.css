@@ -89,3 +89,13 @@ h1, p, input {
     display: flex;
     justify-content: center;
 }
+.blockAdd {
+    position: relative;
+    top: 5px;
+    left: 100px;
+    z-index: 2222;
+}
+.blockAdd .btn {
+    position: relative;
+    left: 50px;
+}

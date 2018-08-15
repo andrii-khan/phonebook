@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhoneBook</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -34,15 +35,18 @@
                 </div>
             </div>
             <div class="wrapper">
-                <div class="contac addbook">
-                    <div class="entry">
-                        <div class="name"><p>Valera Begun</p></div>
-                        <div class="phone"><p>+380 (50) 305 03 43</p></div>
-                        <div class="email"><p>valerka23@gmail.com</p></div>
-                        <div class="del"><a href="#">Delete</a></div>
-                    </div>
-                </div>
-                <div class="blockAdd" id="blockAdd" style="display: none">
+                <ul id="contact-list">
+
+                </ul>
+                <!--<div class="contac addbook">-->
+                    <!--<div class="entry">-->
+                        <!--<div class="name"><p>Valera Begun</p></div>-->
+                        <!--<div class="phone"><p>+380 (50) 305 03 43</p></div>-->
+                        <!--<div class="email"><p>valerka23@gmail.com</p></div>-->
+                        <!--<div class="del"><a href="#">Delete</a></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="blockAdd iphone" id="blockAdd" style="display: none">
                         <input class="formFields" id="firstName" type="text" name="firstName" placeholder="Имя">
                         <input class="formFields" id="lastName" type="text" name="lastName" placeholder="Фамилия">
                         <input class="formFields" id="phone" type="number" name="phone" placeholder="Телефон">
@@ -50,9 +54,13 @@
                         <input class="btn" type="submit" value="Cancel" id="cancelBtn">
                         <input class="btn" type="submit" value="Save" id="addBtn">
                 </div>
+                <div class="showinfo iphone" id="showinfo" style="display: none">
 
+                </div>
             </div>
+
         </div>
+
         <!--<div class="footer">-->
             <!--<p>copyright 2018</p>-->
         <!--</div>-->
@@ -62,7 +70,7 @@
 <!--<footer></footer>-->
 
 
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>

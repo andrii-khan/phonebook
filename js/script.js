@@ -147,6 +147,4 @@ function filterContacts() {
 }
 
 
-
 showAddressBook();
-

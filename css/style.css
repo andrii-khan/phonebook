@@ -27,6 +27,7 @@ h1, p, input, a, li {
 }
 .plus {
     align-self: center;
+    color: #007aff;
 }
 .find {
     margin: 0 15px;
@@ -153,6 +154,12 @@ h1, p, input, a, li {
     /*order: -1;*/
     /*margin: 10px;*/
 /*}*/
+.btn {
+    color: #007aff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
 .button__top {
     display: flex;
     justify-content: space-between;
@@ -171,4 +178,13 @@ h1, p, input, a, li {
 .fa-plus:before {
     content: "\f067";
     font-size: 25px;
+}
+.contact__img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #c3c3c3;
+    align-self: center;
+    margin: 20px 0;
+
 }

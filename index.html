@@ -27,7 +27,7 @@
                 <div id="clear" class="clear">
                     <i class="fas fa-times"></i></div>
             </div>
-            <div class="myinfo">
+            <div class="myinfo" id="myinfo">
                 <div class="avatar"><img src="img/IMG_2773.JPG" alt="аватарка"></div>
                 <div class="myinfo__content">
                     <div class="myinfo__name"><p>Andrey Khan</p></div>
@@ -38,14 +38,7 @@
                 <ul id="contact-list">
 
                 </ul>
-                <!--<div class="contac addbook">-->
-                    <!--<div class="entry">-->
-                        <!--<div class="name"><p>Valera Begun</p></div>-->
-                        <!--<div class="phone"><p>+380 (50) 305 03 43</p></div>-->
-                        <!--<div class="email"><p>valerka23@gmail.com</p></div>-->
-                        <!--<div class="del"><a href="#">Delete</a></div>-->
-                    <!--</div>-->
-                <!--</div>-->
+
                 <div class="blockAdd iphone" id="blockAdd" style="display: none">
                     <div class="button__top">
                         <input class="btn" type="submit" value="Cancel" id="cancelBtn">
@@ -62,15 +55,14 @@
                 <div class="showinfo iphone" id="showinfo" style="display: none">
                     <div class="button__top">
                         <input class="btn" type="submit" value="Back" id="backBtn">
-                        <p>Contact</p>
                         <input class="btn" type="submit" value="Edit" id="editBtn">
                     </div>
-                    <div class="contact__show"></div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <div class="contact__show" id="s-cont">
+                        <div class="contact__img"></div>
+                        <div class="firstName"></div>
+                        <div class="phone"></div>
+                    </div>
+
 
                 </div>
             </div>
@@ -87,7 +79,7 @@
     });
 
 
-</script>
+</script>`
 
 
 </body>

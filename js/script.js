@@ -3,10 +3,13 @@
 const searchInput = document.getElementById('filter');
 const clearBtn = document.getElementById('clear');
 var blockToAddForm = document.querySelector('.blockAdd');
+var blockToEit = document.querySelector('.showinfo');
 var openBtn = document.getElementById('openBtn');
 var cancelBtn = document.getElementById('cancelBtn');
 var addBtn = document.getElementById('addBtn');
-
+var backBtn = document.getElementById('backBtn');
+var editBtn = document.getElementById('editBtn');
+var editContact = document.querySelector('#contact-list');
 //Form Fields
 
 var firstName = document.getElementById('firstName');
@@ -25,12 +28,23 @@ var contactsBlock = document.querySelector('#contact-list');
 var addressBook = [];
 
 openBtn.addEventListener('click', function () {
-    blockToAddForm.style.display = "flex";
+    blockToAddForm.style.display = "block";
+
 });
 
 cancelBtn.addEventListener('click', function () {
     blockToAddForm.style.display = "none";
     clearForm();
+});
+
+backBtn.addEventListener('click', function () {
+    blockToEit.style.display = "none";
+    clearForm();
+});
+
+editContact.addEventListener('click', function () {
+    blockToEit.style.display = "block";
+    console.log(this);
 });
 
 clearBtn.addEventListener('click', function() {
@@ -50,12 +64,29 @@ function Contact(firstName,lastName,phone,email) {
     this.id = new Date().getTime();
 }
 
+// обязательно вводить все данные
+// function addToBook() {
+//     var _firstName = firstName.value;
+//     var _lastName = lastName.value;
+//     var _phone = phone.value;
+//     var _email = email.value;
+//     var isNull = _firstName !== '' && _lastName !== '' && _phone !== '' && _email !== '';
+//     if (isNull) {
+//         var newContact = new Contact(_firstName, _lastName, _phone, _email);
+//         setContactsFromStore(newContact);
+//         blockToAddForm.style.display = 'none';
+//         clearForm();
+//         showAddressBook();
+//     }
+// }
+
+// обязательно вводить имя и телефон
 function addToBook() {
     var _firstName = firstName.value;
     var _lastName = lastName.value;
     var _phone = phone.value;
     var _email = email.value;
-    var isNull = _firstName !== '' && _lastName !== '' && _phone !== '' && _email !== '';
+    var isNull = _firstName !== '' && _phone !== '';
     if (isNull) {
         var newContact = new Contact(_firstName, _lastName, _phone, _email);
         setContactsFromStore(newContact);
@@ -102,7 +133,6 @@ function getContactHTML(contact) {
 }
 
 function filterContacts() {
-    // Declare variables
     var filter, li;
     filter = searchInput.value.toUpperCase();
     li = contactsBlock.getElementsByTagName('li');
@@ -115,6 +145,8 @@ function filterContacts() {
         }
     });
 }
+
+
 
 showAddressBook();
 

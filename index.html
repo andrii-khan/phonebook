@@ -47,30 +47,49 @@
                     <!--</div>-->
                 <!--</div>-->
                 <div class="blockAdd iphone" id="blockAdd" style="display: none">
+                    <div class="button__top">
+                        <input class="btn" type="submit" value="Cancel" id="cancelBtn">
+                        <p>Contact</p>
+                        <input class="btn" type="submit" value="Save" id="addBtn">
+                    </div>
+                    <div class="contact__show">
                         <input class="formFields" id="firstName" type="text" name="firstName" placeholder="Имя">
                         <input class="formFields" id="lastName" type="text" name="lastName" placeholder="Фамилия">
-                        <input class="formFields" id="phone" type="number" name="phone" placeholder="Телефон">
+                        <input class="formFields" id="phone" type="text" name="phone" placeholder="Телефон">
                         <input class="formFields" id="email" type="email" name="email" placeholder="E-mail">
-                        <input class="btn" type="submit" value="Cancel" id="cancelBtn">
-                        <input class="btn" type="submit" value="Save" id="addBtn">
+                    </div>
                 </div>
                 <div class="showinfo iphone" id="showinfo" style="display: none">
+                    <div class="button__top">
+                        <input class="btn" type="submit" value="Back" id="backBtn">
+                        <p>Contact</p>
+                        <input class="btn" type="submit" value="Edit" id="editBtn">
+                    </div>
+                    <div class="contact__show"></div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
 
                 </div>
             </div>
 
         </div>
 
-        <!--<div class="footer">-->
-            <!--<p>copyright 2018</p>-->
-        <!--</div>-->
     </div>
-<!--<header></header>-->
-<!--<main></main>-->
-<!--<footer></footer>-->
-
-
 <script type="text/javascript" src="js/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#phone").mask("+99 (999) 999-99-99");
+    });
+
+
+</script>
+
+
 </body>
 
 </html>

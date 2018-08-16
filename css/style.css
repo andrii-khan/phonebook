@@ -93,10 +93,6 @@ h1, p, input, a, li {
     border-bottom: 2px solid grey;
 
 }
-.footer {
-    display: flex;
-    justify-content: center;
-}
 #firstName p {
     font-weight: bold;
     font-style: italic;
@@ -112,15 +108,15 @@ h1, p, input, a, li {
     /*left: 50px;*/
 /*}*/
 .blockAdd {
-    display: flex;
+    /*display: flex;*/
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     background: #fff;
-    flex-direction: column;
-    align-items: center;
+    /*flex-direction: column;*/
+    /*align-items: center;*/
 }
 .showinfo {
     display: flex;
@@ -140,4 +136,39 @@ h1, p, input, a, li {
 }
 #contact-list {
     padding: 0;
+}
+/*.cancel {*/
+    /*display: flex;*/
+    /*!* align-items: flex-start; *!*/
+    /*align-self: flex-start;*/
+    /*flex-direction: column;*/
+    /*order: -1;*/
+    /*margin: 10px;*/
+/*}*/
+/*.save {*/
+    /*display: flex;*/
+    /*!* align-items: flex-start; *!*/
+    /*align-self: flex-end;*/
+    /*flex-direction: column-reverse;*/
+    /*order: -1;*/
+    /*margin: 10px;*/
+/*}*/
+.button__top {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px 0 20px;
+}
+.button__top p {
+    margin: 20px 0;
+    font-weight: bold;
+}
+.contact__show {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+.fa-plus:before {
+    content: "\f067";
+    font-size: 25px;
 }

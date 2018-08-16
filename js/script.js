@@ -40,6 +40,10 @@ var currentUser;
 openBtn.addEventListener('click', function () {
     blockToAddForm.style.display = "block";
     deleteBtn.style.display = 'none';
+    deleteForm.style.display = 'none';
+    if (!currentUser) {
+        clearForm();
+    }
 });
 
 cancelBtn.addEventListener('click', function () {
@@ -127,6 +131,12 @@ clearBtn.addEventListener('click', function() {
 searchInput.addEventListener('keyup', filterContacts);
 
 addBtn.addEventListener('click', addToBook);
+
+addBtn.addEventListener('click', function () {
+    deleteForm.style.display = 'none';
+    deleteBtn.style.display = 'none';
+});
+
 contactsBlock.addEventListener('click', removeEntry);
 
 function Contact(firstName,lastName,phone,email) {

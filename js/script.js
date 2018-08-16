@@ -125,8 +125,11 @@ showContactInfo.addEventListener('click', function (event) {
     }
 });
 
+//Очистка поля поиска
 clearBtn.addEventListener('click', function() {
     searchInput.value = '';
+    clearForm();
+    showAddressBook();
 });
 
 searchInput.addEventListener('keyup', filterContacts);
@@ -148,21 +151,6 @@ function Contact(firstName,lastName,phone,email) {
     this.id = new Date().getTime();
 }
 
-// обязательно вводить все данные
-// function addToBook() {
-//     var _firstName = firstName.value;
-//     var _lastName = lastName.value;
-//     var _phone = phone.value;
-//     var _email = email.value;
-//     var isNull = _firstName !== '' && _lastName !== '' && _phone !== '' && _email !== '';
-//     if (isNull) {
-//         var newContact = new Contact(_firstName, _lastName, _phone, _email);
-//         setContactsFromStore(newContact);
-//         blockToAddForm.style.display = 'none';
-//         clearForm();
-//         showAddressBook();
-//     }
-// }
 
 // обязательно вводить имя и телефон
 function addToBook() {
@@ -197,6 +185,7 @@ function removeEntry(e) {
     }
 }
 
+//Очистка
 function clearForm() {
     var frm = document.querySelectorAll(".formFields");
     for(var i in frm){
@@ -220,11 +209,11 @@ function setContactsFromStore(contact) {
     contacts.push(contact);
     localStorage.setItem('contacts', JSON.stringify(contacts));
 }
-
+//Создаем уникальный ID
 function getContactHTML(contact) {
     return '<li class="contact__item" data-id="' + contact.id + '">' + contact.lastName + ' ' + contact.firstName + '</li>';
 }
-
+//Поиск
 function filterContacts() {
     var filter, li;
     filter = searchInput.value.toUpperCase();

@@ -48,6 +48,7 @@ openBtn.addEventListener('click', function () {
 
 cancelBtn.addEventListener('click', function () {
     blockToAddForm.style.display = "none";
+    deleteForm.style.display = 'none';
     if (!currentUser) {
         clearForm();
     }

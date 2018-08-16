@@ -12,6 +12,11 @@
 </head>
 <body>
 <div class="iphone">
+    <!--<div class="overlay" title="окно"></div>-->
+    <!--<div class="popup">-->
+        <!--<div class="close_window">x</div>-->
+        <!--<p>Тут будет текст</p>-->
+    <!--</div>-->
 
         <div class="header"></div>
         <div class="main">
@@ -31,7 +36,7 @@
                 <div class="avatar"><img src="img/IMG_2773.JPG" alt="аватарка"></div>
                 <div class="myinfo__content">
                     <div class="myinfo__name"><p>Andrey Khan</p></div>
-                    <div class="myinfo__number"><p>Мой номер : +380 (99) 958 24 84</p></div>
+                    <div class="myinfo__number"><p>Мой номер : <br> +380 (99) 958 24 84</p></div>
                 </div>
             </div>
             <div class="wrapper">
@@ -41,28 +46,83 @@
 
                 <div class="blockAdd iphone" id="blockAdd" style="display: none">
                     <div class="button__top">
-                        <input class="btn" type="submit" value="Cancel" id="cancelBtn">
-                        <p>Contact</p>
-                        <input class="btn" type="submit" value="Save" id="addBtn">
+                        <!--<input class="btn" type="submit" value="Cancel" id="cancelBtn">-->
+                        <p class="btn" id="cancelBtn">Cancel</p>
+                        <p class="edit__text">Contact</p>
+                        <!--<input class="btn" type="submit" value="Save" id="addBtn">-->
+                        <p class="btn" id="addBtn">Save</p>
                     </div>
                     <div class="contact__show">
-                        <input class="formFields" id="firstName" type="text" name="firstName" placeholder="Имя">
-                        <input class="formFields" id="lastName" type="text" name="lastName" placeholder="Фамилия">
+                        <input maxlength="12" class="formFields" id="firstName" type="text" name="firstName" placeholder="Имя">
+                        <input maxlength="12" class="formFields" id="lastName" type="text" name="lastName" placeholder="Фамилия">
                         <input class="formFields" id="phone" type="text" name="phone" placeholder="Телефон">
                         <input class="formFields" id="email" type="email" name="email" placeholder="E-mail">
+                    </div>
+                    <p class="deleteBtn" id="deleteBtn" style="display: none">Delete</p>
+
+                    <div class="delereForm" id="deleteForm" style="display: none">
+                        <div class="btnDelete">Yes</div>
+                        <div class="btnCancel">No</div>
                     </div>
                 </div>
                 <div class="showinfo iphone" id="showinfo" style="display: none">
                     <div class="button__top">
-                        <input class="btn" type="submit" value="Back" id="backBtn">
-                        <input class="btn" type="submit" value="Edit" id="editBtn">
+                        <!--<input class="btn" type="submit" value="Back" id="backBtn">-->
+                        <p class="btn" id="backBtn">Back</p>
+                        <p class="btn" id="editBtn">Edit</p>
+                        <!--<input class="btn" type="submit" value="Edit" id="editBtn">-->
                     </div>
-                    <div class="contact__show" id="s-cont">
-                        <div class="contact__img"></div>
+                    <div class="contact__show">
+                        <div class="contact__img"><i class="fas fa-user"></i></div>
                         <div class="firstName"></div>
-                        <div class="phone"></div>
-                    </div>
+                        <div class="lastName"></div>
+                        <div class="icons">
+                            <div class="icons__item">
+                                <div class="comment">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <div class="icon__text">message</div>
+                            </div>
 
+                            <div class="icons__item">
+                                <div class="call">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="icon__text">call</div>
+                            </div>
+
+                            <div class="icons__item">
+                                <div class="video">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <div class="icon__text">video</div>
+                            </div>
+
+                            <div class="icons__item">
+                                <div class="mail">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="icon__text">mail</div>
+                            </div>
+                        </div>
+                        <div class="phone__text">mobile</div>
+                        <div class="phone"></div>
+                        <div class="facetime">
+                            <div class="facetime__text">FaceTime</div>
+                            <div class="facetime__icon">
+                                <i class="fas fa-video"></i>
+                                <i class="fas fa-phone"></i>
+                            </div>
+                        </div>
+                        <div class="email__text">mail</div>
+
+                        <div class="email"></div>
+                        <div class="link">
+                            <p>Send Message</p>
+                            <p>Add to Favirites</p>
+                            <p>Share My Location</p>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -78,8 +138,16 @@
         $("#phone").mask("+99 (999) 999-99-99");
     });
 
-
-</script>`
+</script>
+<!--<script type="text/javascript">-->
+    <!--$('.popup .close_window, .overlay').click(function (){-->
+        <!--$('.popup, .overlay').css({'opacity': 0, 'visibility': 'hidden'});-->
+    <!--});-->
+    <!--$('a.open_window').click(function (e){-->
+        <!--$('.popup, .overlay').css({'opacity': 1, 'visibility': 'visible'});-->
+        <!--e.preventDefault();-->
+    <!--});-->
+<!--</script>-->
 
 
 </body>

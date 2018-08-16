@@ -6,7 +6,7 @@ a, li {
     text-decoration: none;
     list-style: none;
 }
-h1, p, input, a, li, .contact__show {
+h1, p, input, a, li, .contact__show, .find {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
 }
